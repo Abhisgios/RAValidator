@@ -17,10 +17,10 @@ public class Cell_Number: UICollectionViewCell {
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136:
-                print("iPhone 5C")
+               // print("iPhone 5C")
                 view.layer.cornerRadius = 35
             case 1334, 1920, 2208, 2436:
-                print("iPhone 6 or 6+ or X")
+               // print("iPhone 6 or 6+ or X")
                 view.layer.cornerRadius = 45
             default:
                 print("unknown")
@@ -53,10 +53,10 @@ public class Cell_Number: UICollectionViewCell {
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136:
-                print("iPhone 5C")
+               // print("iPhone 5C")
                 btn.layer.cornerRadius = 35
             case 1334, 1920, 2208, 2436:
-                print("iPhone 6 or 6+ or X")
+               // print("iPhone 6 or 6+ or X")
                 btn.layer.cornerRadius = 45
             default:
                 print("unknown")
@@ -90,7 +90,7 @@ public class Cell_Number: UICollectionViewCell {
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136:
-                print("iPhone 5C")
+              //  print("iPhone 5C")
                 viewBk.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
                 viewBk.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
                 viewBk.widthAnchor.constraint(equalToConstant: 70).isActive = true
@@ -102,7 +102,7 @@ public class Cell_Number: UICollectionViewCell {
                 btnTap.heightAnchor.constraint(equalToConstant: 70).isActive = true
 
             case 1334, 1920, 2208, 2436:
-                print("iPhone 6 or 6+ or X")
+               // print("iPhone 6 or 6+ or X")
                 viewBk.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
                 viewBk.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
                 //  viewBk.rightAnchor.constraint(equalTo: rightAnchor, constant: 0).isActive = true

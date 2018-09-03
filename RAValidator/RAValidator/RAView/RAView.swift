@@ -20,6 +20,7 @@ public class RAView: UIView {
     var collView:UICollectionView!
     var str_Generated:String = ""
     var str_SelectedNumbers:String = ""
+    public var controllerReference:UIViewController!
     var timer:Timer!
     var arrNumbers:Array<String> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
@@ -180,9 +181,16 @@ extension RAView: UICollectionViewDataSource, UICollectionViewDelegate
                     self.removeFromSuperview()
                 })
                 alertView.addAction(action)
-              //  self.present(alertView, animated: true, completion: nil)
-                self.window?.rootViewController?.present(alertView, animated: true, completion: nil)
 
+                if controllerReference != nil
+                {
+                    self.controllerReference.present(alertView, animated: true, completion: nil)
+                }
+                else
+                {
+                    // if you are showing the RAView on parent Controller
+                    self.window?.rootViewController?.present(alertView, animated: true, completion: nil)
+                }
             }
             else
             {
@@ -202,7 +210,15 @@ extension RAView: UICollectionViewDataSource, UICollectionViewDelegate
                     }
                 })
                 alertView.addAction(action)
-                self.window?.rootViewController?.present(alertView, animated: true, completion: nil)
+                if controllerReference != nil
+                {
+                    self.controllerReference.present(alertView, animated: true, completion: nil)
+                }
+                else
+                {
+                    // if you are showing the RAView on parent Controller
+                    self.window?.rootViewController?.present(alertView, animated: true, completion: nil)
+                }
             }
             str_SelectedNumbers = ""
         }

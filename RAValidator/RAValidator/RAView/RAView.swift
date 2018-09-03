@@ -68,10 +68,10 @@ public class RAView: UIView {
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
             case 1136:
-                print("iPhone 5C")
+               // print("iPhone 5C")
                 layout.itemSize = CGSize(width: 80, height: 80)
             case 1334, 1920, 2208, 2436:
-                print("iPhone 6 or 6+ or X")
+               // print("iPhone 6 or 6+ or X")
                 layout.itemSize = CGSize(width: 110, height: 110)
             default:
                 print("unknown")
